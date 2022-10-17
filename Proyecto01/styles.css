@@ -1,0 +1,50 @@
+/*
+  Hoja de estilos para la pagina web
+*/
+
+*{
+ font-family:  Jetbrains Mono;
+}  
+
+#AcercaDeMi, #Skills, , #intereses, #Contactos{
+  height: 10px;
+  weidth: 20px:
+  background-color: GREY;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.Fondo{
+  background-color: CORAL;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#descripcion1, #descripcion2, #descripcion3{
+  height: 20px;
+  weidth: 40px:
+  background-color: GREY;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.contactBox1{
+  height: 50px;
+  weidth: 80px:
+  background-color: GREY;
+}
+
+.contactBox2{
+  height: 20px;
+  weidth: 80:
+  background-color: GREY;
+}
+
+.contactBox3{
+  height: 20px;
+  weidth: 80px:
+  background-color: GREY;
+}
+
+.contactBox4{
+  height: 60px;
+  weidth: 80px:
+  background-color: GREY;
+}
