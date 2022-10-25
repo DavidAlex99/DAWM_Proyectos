@@ -6,95 +6,117 @@
     <title>Portafolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" ref="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     
 </head>
 <body>
 
-    <section class="cabecera">
+    <div class="flex-container">
         <!-- Seccion para la parte de la cabecera -->
         <!-- Contenedor para los accesos directos, en el css modificar sus posiciiones para 
             que quede una alado de otras -->
-        <div id="AcercaDeMi">
+        <div>
             ACERCA DE MI
         </div>
 
-        <div id="Skills">
+        <div>
             SKILLS
         </div>
 
-        <div id="Intereses">
+        <div>
             INTERESES
         </div>
 
-        <div id="Contactos">
+        <div>
             CONTACTOS
         </div>
 
-    </section>
+    </div>
 
-    <section class="<Fondo">
+    <section class="Fondo">
         <!-- Seccion donde se va a poner la imagen -->
-        
+        <img src="fondo.jpg">
     </section>    
     
     <section class="Fondo">
         <!-- Seccion para la parte de ahbilidades -->
         <table>
-
+            <tr>
+               <th>Lenguaje</th> 
+               <th>Opinion</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
         </table>
         
     </section>
 
-    <section class="Fondo">
-        <!-- Seccion par la parte de intereses -->
-        <header>
-            
+    <section class="intereses">
+
+        <div id="titleIntereses">
+            <!-- Seccion par la parte de intereses -->
             <div>
                 <p>
                     INTERESES
                 </p>
             </div> 
-        </header>       
+        </div>
 
-            <!-- en el css modificar sus posiciiones para que quede una alado de otra,
-            tantos las imagenes como las descripciones -->
-            <div>
-                <div id="imagen1">
-                    
-                </div>
-                
-                <div id="descripcion1">
-                    <p>
-                        descripcion corta de la imagen 
-                    </p>
-                </div>
-            </div>
+        <div id="flexContainerIntereses">
+                <!-- en el css modificar sus posiciiones para que quede una alado de otra,
+                tantos las imagenes como las descripciones -->
             
-            <div>
-                 <div id="imagen2">
+            <div id="interes1">
 
-                 </div>
-                
-                 <div id="descripcion2">
-                    <p>
-                        descripcion corta de la imagen 
-                    </p>
-                 </div>
+                <div id="imagen1"> 
+                <img class="Icono" src="interes.jpg">
+                </div>
+
+                <div id="descripcion1">
+                descripciondddd      
+                </div>
+
             </div>
 
-           
-            <div>
+            <div id="interes2">
+
+                <div id="imagen2">
+                <img class="Icono" src="interes.jpg">
+                </div>
+
+                <div id="descripcion2">
+                    descripcion corta de la imagen 
+                </div>
+
+            </div>
+
+            <div id="interes3">
+
                 <div id="imagen3">
+                <img class="Icono" src="interes.jpg">
+                </div>
 
-                </div>
-                
                 <div id="descripcion3">
-                    <p>
-                        descripcion corta de la imagen 
-                    </p>
+                descripcion corta de la imagen 
                 </div>
+
             </div>
+
+        </div>
 
     </section>
 
@@ -124,22 +146,22 @@
             </div>
         </div>
         
-        <div>
+        <div id="cuadrosContacto">
             <!-- para cada una de las cajas en donde va a estar la informacion -->
-            <div class="contactBox1>
-                
+            <div id="contactBox1">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
             </div>
             
-            <div class="contactBox2>
-                
+            <div id="contactBox2">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
             </div>
             
-            <div class="contactBox3>
-                
+            <div id="contactBox3">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
             </div>
             
-            <div class="contactBox4>
-                
+            <div id="contactBox4">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
             </div>
         </div>
     </section>

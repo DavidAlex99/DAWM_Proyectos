@@ -1,0 +1,249 @@
+/*
+  Hoja de estilos para la pagina web
+*/
+
+*{
+ font-family:  Jetbrains Mono;
+}  
+
+.flex-container{
+  display: flex;
+  background-color: red;
+}
+
+.flex-container > div{
+  background-color: grey;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.intereses{
+  background-color: yellow;
+  text-align: center;
+}
+
+#flexContainerIntereses{
+  display:grid;
+  grid-template-areas: "i1 i2 i3";
+  background-color: yellow;
+}
+
+/* #flex-container-intereses > nav{
+  background-color: aqua;
+  width: 50px;
+  margin: 30px;
+} */
+
+img.Icono{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#interes1{
+  grid-area: i1;
+}
+
+/*
+Para hacer un contendro donde tenga la imagen y la descripcion
+*/
+#interes1{
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#imagen1{
+  background-color: blue;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#descripcion1{
+  background-color: rgb(11, 104, 42);
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#interes2{
+  grid-area: i2;
+}
+
+/*
+Para hacer un contendro donde tenga la imagen y la descripcion
+*/
+#interes2{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(87, 180, 102);
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/*
+dentro del contenedor interes1
+*/
+#imagen2{
+  background-color: blue;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#descripcion2{
+  background-color: grey;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#interes3{
+  grid-area: i3;
+  background-color: rgb(192, 198, 255);
+}
+
+/*
+Para hacer un contendro donde tenga la imagen y la descripcion
+*/
+#interes3{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(68, 8, 8);
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+#imagen3{
+  background-color: blue;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#descripcion3{
+  background-color: grey;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/*
+#imagen1{
+  grid-area: i1;
+  background-color: gray;
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#imagen2{
+  grid-area: i2;
+  background-color: gray;
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#imagen3{
+  grid-area: i3;
+  background-color: gray;
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#descripcion1{
+  grid-area: d1;
+  background-color: rgb(128, 128, 128);
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#descripcion2{
+  grid-area: d2;
+  background-color: rgb(128, 128, 128);
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+
+#descripcion3{
+  grid-area: d3;
+  background-color: rgb(128, 128, 128);
+  margin: 30px;
+  height: 50px;
+  width: 50px;
+}
+*/
+
+#AcercaDeMi{
+  height: 10px;
+  width: 20px;
+  background-color: GREY;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.Fondo{
+  background-color: CORAL;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#descripcion1, #descripcion2, #descripcion3{
+  height: 20px;
+  width: 40px;
+  background-color: GREY;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+#cuadrosContacto{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(8, 6, 7);  
+  margin-right: 25px;
+  margin-left: 250px;
+  margin-bottom: 10px;
+  align-content: center;
+}
+
+#contactBox1{
+  height: 50px;
+  width: 95%;
+  margin: 10px;
+  background-color: GREY;
+}
+
+#contactBox2{
+  height: 20px;
+  width: 95%;
+  margin: 10px;
+  background-color: GREY;
+}
+
+#contactBox3{
+  height: 20px;
+  width: 95%;
+  margin: 10px;
+  background-color: GREY;
+}
+
+#contactBox4{
+  height: 60px;
+  width: 95%;
+  margin: 10px;
+  margin-bottom: 10px;
+  background-color: GREY;
+}

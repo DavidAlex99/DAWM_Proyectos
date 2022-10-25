@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body>
+
+    <div class="flex-container">
+        <!-- Seccion para la parte de la cabecera -->
+        <!-- Contenedor para los accesos directos, en el css modificar sus posiciiones para 
+            que quede una alado de otras -->
+        <div>
+            ACERCA DE MI
+        </div>
+
+        <div>
+            SKILLS
+        </div>
+
+        <div>
+            INTERESES
+        </div>
+
+        <div>
+            CONTACTOS
+        </div>
+
+    </div>
+
+    <section class="Fondo">
+        <!-- Seccion donde se va a poner la imagen -->
+        <img src="fondo.jpg">
+    </section>    
+    
+    <section class="Fondo">
+        <!-- Seccion para la parte de ahbilidades -->
+        <table>
+            <tr>
+               <th>Lenguaje</th> 
+               <th>Opinion</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Bien</td>
+            </tr>
+        </table>
+        
+    </section>
+
+    <section class="intereses">
+
+        <div id="titleIntereses">
+            <!-- Seccion par la parte de intereses -->
+            <div>
+                <p>
+                    INTERESES
+                </p>
+            </div> 
+        </div>
+
+        <div id="flexContainerIntereses">
+                <!-- en el css modificar sus posiciiones para que quede una alado de otra,
+                tantos las imagenes como las descripciones -->
+            
+            <div id="interes1">
+
+                <div id="imagen1"> 
+                imagen1
+                </div>
+
+                <div id="descripcion1">
+                descripciondddd      
+                </div>
+
+            </div>
+
+            <div id="interes2">
+
+                <div id="imagen2">
+                imagen2
+                </div>
+
+                <div id="descripcion2">
+                    descripcion corta de la imagen 
+                </div>
+
+            </div>
+
+            <div id="interes3">
+
+                <div id="imagen3">
+                <img class="Icono" src="interes.jpg">
+                </div>
+
+                <div id="descripcion3">
+                descripcion corta de la imagen 
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="Fondo">
+        <!-- Seccion para el contacto -->
+        <header>
+            <div>
+                <p>
+                    CONTACTOS
+                </p>
+            </div>   
+        </header>
+        
+        <div>
+            <!-- div para poner los iconos de las redes sociales -->
+            <!-- En cada div hijo se pone cada icoo de la red social -->
+            <div>
+                
+            </div>
+            
+            <div>
+                
+            </div>
+            
+            <div>
+                
+            </div>
+        </div>
+        
+        <div id="cuadrosContacto">
+            <!-- para cada una de las cajas en donde va a estar la informacion -->
+            <div id="contactBox1">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
+            </div>
+            
+            <div id="contactBox2">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
+            </div>
+            
+            <div id="contactBox3">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
+            </div>
+            
+            <div id="contactBox4">
+                This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px
+            </div>
+        </div>
+    </section>
+        
+
+    
+</body>
+</html>
