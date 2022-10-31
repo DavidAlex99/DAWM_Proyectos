@@ -212,7 +212,7 @@ Para hacer un contendro donde tenga la imagen y la descripcion
 
 article{
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 10% 40% 50%;
 }
 
 #tituloSeccion4{
@@ -243,7 +243,7 @@ article{
   display: flex;
   flex-direction: column;
   margin-right: 10px;
-  margin-left: 50%;
+  margin-left: 5%;
   margin-bottom: 10px;
 }
 
