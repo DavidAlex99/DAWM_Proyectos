@@ -28,14 +28,21 @@ async function getMonedas(){
   }
 }
 
+//funcion para poner las monedas al informacion, de forma
+//nativa en una tabla de informacion
 async function renderMonedas(){
   let users = await getMonedas();
   console.log(users);
   let html = '';
   users.forEach(user => {
-    let htmlSegment = `<div class="user">
-                        <h2>${user.id}</h2>
-                        </div>`;
+    let htmlSegment = `<table>
+                          <tr>
+                            <th>Top</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Capitalizacion Mercado</th>
+                          </tr>
+                        </table>`;
     html += htmlSegment;
   });
   let container = document.getElementById('lista');
