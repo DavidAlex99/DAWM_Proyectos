@@ -206,7 +206,7 @@ async function filtroMonedas(filtroValor){
     
 
 //PENDIENTE crear un eventlistener para el filtro y ejecutar su metodo
-window.onload = tablaMonedas;
+
 
 //EJECUTAR LA FUNCION PARA TOMAR EL NOMBRE DE LA LISTA MEDIANTE UN EVENT
 document.addEventListener('DOMContentLoaded', () => {
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+window.onload = tablaMonedas;
   //PENDIENTE crear un eventlistener para el filtro y ejecutar su metodo
   
   

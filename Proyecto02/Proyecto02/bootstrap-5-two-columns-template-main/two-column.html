@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- vinculo hacia los graficos charse -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <!-- vinculo hacia los efectos css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
       <!--Main Navigation-->
@@ -110,37 +114,94 @@
       <!--Section: para la informacion genera y el cuadro de filtro-->
       <div id="seccionGraficos">
 
-        <div id="iconosMonedas">
-          <p>iconos</p>
-          <!-- div individuales para cada icono -->
-          <div class="imagen">
-            <!-- aqui crear en el javascript la etiqueta img
-            con la imagen del icono -->
-            imagen 1
-          </div>  
-          <div class="imagen">
-            <!-- aqui crear en el javascript la etiqueta img
-            con la imagen del icono -->
-            imagen 2
+        <div id="grafico1">
+          <!-- DIV PARA EL FILTRO -->
+          <div id="filtroOpcion">
+            <select id="filtroGrafico1" onChange="update1()">
+              <option selected>Elija una categoria</option>
+              <option value="1">Pico precio alto</option>
+              <option value="2">Capitalizacion de mercado</option>
+              <option value="3">Precio</option>
+              <option value="4">Cambio porcentual 24h</option>
+            </select>
+            <button id="buttonGrafico1" onclick="getOption1()"> Check option </button>
+            <div>
+              La categoria seleccionada es:
+              <p id="salida1"></p>
+            </div>
           </div>
-          <div class="imagen">
-            <!-- aqui crear en el javascript la etiqueta img
-            con la imagen del icono -->
-            imagen 3
+          <div id="graficoInterno1">
+            <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" /> -->
           </div>
+
+          <div id="iconosMonedas">
+            <!-- div individuales para cada icono -->
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>  
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>
+          </div>
+
         </div>
 
-        <div class="grafico">
-          <div class="graficoInterno">
-            <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+        <div id="grafico2">
+          <div id="filtroOpcion">
+            <select id="filtroGrafico2" onChange="update2()">
+              <option selected>Elija una categoria</option>
+              <option value="1">Pico precio alto</option>
+              <option value="2">Capitalizacion de mercado</option>
+              <option value="3">Precio</option>
+              <option value="4">Cambio porcentual 24h</option>
+            </select>
+            <button id="buttonGrafico2" onclick="getOption2()"> Check option </button>
+            <div>
+              La categoria seleccionada es:
+              <p id="salida2"></p>
+            </div>
           </div>
+          <div class="graficoInterno">
+            <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" /> -->
           </div>
 
-        <div class="grafico">
-          <div class="graficoInterno">
-            <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+          <div id="iconosMonedas">
+            <!-- div individuales para cada icono -->
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>  
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>
+            <div class="imagen">
+              <!-- aqui crear en el javascript la etiqueta img
+              con la imagen del icono -->
+              
+            </div>
           </div>
         </div>    
+      </div>
+
+      <!-- PARA PONER LAS TABLAS SOLO DE BORRADOR DEL CHART -->
+      <div id="tablesBorrador1">
+        tabla1
+      </div>
+
+      <div id="tablesBorrador2">
+        tabla2
       </div>
 
       <!-- <section class="text-center">
@@ -269,15 +330,34 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- SCRIPT INTERNO PARA EL FILTRO DE LAS MONEDAS-->
     <script type="text/javascript">
-      function update() {
-        selectElement = document.querySelector('#ddlViewBy');
+      // function update() {
+      //   selectElement = document.querySelector('#ddlViewBy');
+      //   output = selectElement.options[selectElement.selectedIndex].value;
+      //   console.log(output);
+      //   console.log("en el script interni");
+
+      //   document.querySelector(".salida").textContent = output;
+      // }
+
+      function update1() {
+        selectElement = document.querySelector('#filtroGrafico1');
         output = selectElement.options[selectElement.selectedIndex].value;
+        console.log("valor del output en el update1()");
         console.log(output);
         console.log("en el script interni");
 
-        document.querySelector(".salida").textContent = output;
+        document.querySelector("#salida1").textContent = output;
       }
 
+      function update2() {
+        selectElement = document.querySelector('#filtroGrafico2');
+        output = selectElement.options[selectElement.selectedIndex].value;
+        console.log("valor del output en el update2()");
+        console.log(output);
+        console.log("en el script interni");
+
+        document.querySelector("#salida2").textContent = output;
+      }
 
     </script>
     <!-- Custom scripts -->
