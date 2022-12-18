@@ -1,0 +1,6 @@
+API para ls noticias
+https://cryptonews-api.com/
+
+API de info de las criptos
+https://www.coingecko.com/en/api
+
