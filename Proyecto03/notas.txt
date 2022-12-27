@@ -1,6 +1,10 @@
 API para ls noticias
-https://cryptonews-api.com/
+https://newsapi.org/
+API_KEY
+d86334e0aebb45e8b6cb8f7fa8bb5d77
+ObtenerDatos(){
+    return this.http.get("https://newsapi.org/v2/everything?q=bitcoin&apiKey=d86334e0aebb45e8b6cb8f7fa8bb5d77");
+  }
 
 API de info de las criptos
 https://www.coingecko.com/en/api
-

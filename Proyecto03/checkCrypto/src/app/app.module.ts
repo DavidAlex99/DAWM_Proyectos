@@ -9,6 +9,12 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { EarnComponent } from './components/earn/earn.component';
 
+import { HttpClientModule } from '@angular/common/http'; 
+
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';  
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +22,17 @@ import { EarnComponent } from './components/earn/earn.component';
     BusquedaComponent,
     NoticiasComponent,
     EarnComponent
+
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatIconModule,  
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
