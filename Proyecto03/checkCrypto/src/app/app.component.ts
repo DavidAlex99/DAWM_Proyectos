@@ -4,8 +4,6 @@ import { ServicioService } from './services/servicio.service';
 
 import { General } from './interfaces/general';
 
-import { Noticias } from './interfaces/noticias';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,6 +19,7 @@ export class AppComponent {
 
     servicioService.obtenerDatosCoin().subscribe(respuesta1 => {
       this.infoGeneral = respuesta1 as Array<General>
+      // console.log(this.infoGeneral);
     })
 
     // servicioService.obtenerDatosNoticia().subscribe(respuesta2 => {

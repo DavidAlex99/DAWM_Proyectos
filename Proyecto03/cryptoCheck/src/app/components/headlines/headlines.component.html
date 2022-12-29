@@ -1,0 +1,17 @@
+<div class="container-fluid mt-5">
+    <h4>Top Crypto News</h4>
+    <div class="row">
+        <div class="col-lg-3 mt-3 mb-3"
+            *ngFor="let headlines of topHeadlinesResult"
+        >
+        <div class="card">
+            <img src="{{headlines.urlToImage}}" width="100%" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">"{{headlines.title}}"</h5>
+                <a href="{{headlines.url}}" target=" blank" class="btn btn-dark btn-sm-2">Leer mas</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
