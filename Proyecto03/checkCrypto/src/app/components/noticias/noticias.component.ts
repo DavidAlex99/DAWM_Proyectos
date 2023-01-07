@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { ServicioService } from '../../services/servicio.service';
 
-import { Article } from '../../interfaces/article';
+import { Noticias } from '../../interfaces/noticias';
 
 @Component({
   selector: 'app-noticias',
@@ -12,7 +12,7 @@ import { Article } from '../../interfaces/article';
 
 export class NoticiasComponent {
 
-  infoNews: Article[] = [];
+  infoNews: Noticias[] = [];
 
   constructor(private servicioService: ServicioService) {
 
@@ -22,11 +22,12 @@ export class NoticiasComponent {
       //   this.infoNews.push(respuesta2[i])
       // }
 
-      this.infoNews = respuesta2 as Array<Article>;
+      this.infoNews = respuesta2 as Array<Noticias>;
       console.log(this.infoNews);
 
       
     })
+
   }
 
 }

@@ -1,0 +1,114 @@
+<main class="container-fluid">
+    <!-- Imagen de cabecera recortada-->
+    
+    <img id="imagenCabecera" src="https://raw.githubusercontent.com/DavidAlex99/DAWM_Proyectos/main/Proyecto03/recursos/imagenes/cabeceraRecortada.png" id="imagenCabecera">
+    
+    <input type="text" class="form-control bg-dark text-light border-0 my-4 text-center"
+    (keyup)="searchCoin()"
+    [(ngModel)]="searchText"
+    >
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Precio</th>
+                <th>Price Change</th>
+                <th>24h Volume</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let coin of coins; let i = index">
+                <td>
+                    {{i + 1}}
+                </td>
+                <td>
+                    <img [src]="coin.image" alt="{{coin.name}}" style="width: 2rem">
+                    <span class="ms-3">
+                        "{{coin.name}}"
+                    </span>
+                    <span class="text-muted text-uppercase ms-2">
+                        {{coin.symbol}}
+                    </span>
+                </td>
+                <td>
+                    ${{coin.current_price.toLocaleString()}}
+                </td>
+                <td [ngClass]="coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'">
+                    {{coin.price_change_percentage_24h.toLocaleString()}}
+                </td>
+                <td>
+                    {{coin.total_volume.toLocaleString()}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- EN ESTE ESPACIO VA A IR EL FILTRO -->
+    <div id="filtroOpcion">
+        <!-- METODO enChange() ES PARA QUE SE CAMBIE EL INDICE -->
+        <select id="filtroGrafico1" #filtroGrafico1 (change)="enSeleccion(filtroGrafico1.value)">
+          <option selected>Elija una categoria</option>
+          <option value="1">Market Cap Ascen</option>
+          <option value="2">Volume Ascen</option>
+          <option value="3">Volume Descen</option>
+          <option value="4">ID Descen</option>
+        </select>
+        <!-- <button id="buttonGrafico1" onclick="getOption1()"> Check option </button> -->
+
+        <!-- LLAMANDO A LA FUNCION EN EL TYPESCRIPT -->
+        <button id="buttonGrafico1" (click)='getConfigurations()'>Button Click</button>
+
+
+      <div id="tablaInterna1">
+        AQUI VA A IR UNA TABLA DERIVADA
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Coin</th>
+                    <th>Precio</th>
+                    <th>Price Change</th>
+                    <th>24h Volume</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let coin2 of coins2; let i = index">
+                    <td>
+                        {{i + 1}}
+                    </td>
+                    <td>
+                        <img [src]="coin2.image" alt="{{coin2.name}}" style="width: 2rem">
+                        <span class="ms-3">
+                            "{{coin2.name}}"
+                        </span>
+                        <span class="text-muted text-uppercase ms-2">
+                            {{coin2.symbol}}
+                        </span>
+                    </td>
+                    <td>
+                        ${{coin2.current_price}}
+                    </td>
+                    <td [ngClass]="coin2.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'">
+                        {{coin2.price_change_percentage_24h}}
+                    </td>
+                    <td>
+                        {{coin2.total_volume}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+
+      <div id="graficoInterno1">
+        <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" /> -->
+        AQUI VA A IR EL GRAFICO
+        </div>
+    </div>
+
+        
+</main>

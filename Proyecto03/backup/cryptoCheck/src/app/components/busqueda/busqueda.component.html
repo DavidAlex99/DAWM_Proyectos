@@ -1,0 +1,76 @@
+<main class="container-fluid">
+    <!-- Imagen de cabecera recortada-->
+    
+    <img src="https://raw.githubusercontent.com/DavidAlex99/DAWM_Proyectos/main/Proyecto03/recursos/imagenes/cabeceraRecortada.png" id="imagenCabecera">
+    
+    <input type="text" class="form-control bg-dark text-light border-0 my-4 text-center"
+    (keyup)="searchCoin()"
+    [(ngModel)]="searchText"
+    >
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Precio</th>
+                <th>Price Change</th>
+                <th>24h Volume</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let coin of coins; let i = index">
+                <td>
+                    {{i + 1}}
+                </td>
+                <td>
+                    <img [src]="coin.image" alt="{{coin.name}}" style="width: 2rem">
+                    <span class="ms-3">
+                        "{{coin.name}}"
+                    </span>
+                    <span class="text-muted text-uppercase ms-2">
+                        {{coin.symbol}}
+                    </span>
+                </td>
+                <td>
+                    ${{coin.current_price.toLocaleString()}}
+                </td>
+                <td [ngClass]="coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'">
+                    {{coin.price_change_percentage_24h.toLocaleString()}}
+                </td>
+                <td>
+                    {{coin.total_volume.toLocaleString()}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- EN ESTE ESPACIO VA A IR EL FILTRO -->
+    <div id="filtroOpcion">
+        <select id="filtroGrafico1" onChange="update1()">
+          <option selected>Elija una categoria</option>
+          <option value="1">Cambio Precio Porcentual 24h</option>
+          <option value="2">Cambio Precio 24h</option>
+          <option value="3">Cambio Market-Cap Porcentual 24h</option>
+          <option value="4">Cambio Market-Cap 24h</option>
+        </select>
+        <button id="buttonGrafico1" onclick="getOption1()"> Check option </button>
+        <div>
+          La categoria seleccionada es:
+          <p id="salida1"></p>
+        </div>
+      </div>
+
+      <div id="tablaInterna1">
+        AQUI VA A IR UNA TABLA DERIVADA
+      </div>
+
+      <div id="graficoInterno1">
+        <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" /> -->
+        AQUI VA A IR EL GRAFICO
+      </div>
+
+        
+</main>

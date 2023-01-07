@@ -8,17 +8,24 @@ import { CryptonewsComponent } from './components/cryptonews/cryptonews.componen
 
 import {NewsAPIService} from './services/news-api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { GeneralComponent } from './components/general/general.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadlinesComponent,
-    CryptonewsComponent
+    CryptonewsComponent,
+    GeneralComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
