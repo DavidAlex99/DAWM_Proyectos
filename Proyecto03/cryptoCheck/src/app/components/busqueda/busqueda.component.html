@@ -13,6 +13,7 @@
             <tr>
                 <th>#</th>
                 <th>Coin</th>
+                <th>Market Cap</th>
                 <th>Precio</th>
                 <th>Price Change</th>
                 <th>24h Volume</th>
@@ -32,6 +33,9 @@
                     <span class="text-muted text-uppercase ms-2">
                         {{coin.symbol}}
                     </span>
+                </td>
+                <td>
+                    ${{coin.market_cap.toLocaleString()}}
                 </td>
                 <td>
                     ${{coin.current_price.toLocaleString()}}
@@ -70,6 +74,7 @@
                 <tr>
                     <th>#</th>
                     <th>Coin</th>
+                    <th>Market Cap</th>
                     <th>Precio</th>
                     <th>Price Change</th>
                     <th>24h Volume</th>
@@ -91,6 +96,9 @@
                         </span>
                     </td>
                     <td>
+                        ${{coin2.market_cap}}
+                    </td>
+                    <td>
                         ${{coin2.current_price}}
                     </td>
                     <td [ngClass]="coin2.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger'">
@@ -104,9 +112,9 @@
         </table>
       </div>
 
-      <div id="graficoInterno1">
-        <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" /> -->
-        AQUI VA A IR EL GRAFICO
+        <div id="graficoInterno1">
+            <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" /> -->
+            AQUI VA A IR EL GRAFICO
         </div>
     </div>
 

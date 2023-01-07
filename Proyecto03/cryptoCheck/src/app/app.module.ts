@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { GeneralComponent } from './components/general/general.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import {FormsModule} from '@angular/forms';
+import { EarnComponent } from './components/earn/earn.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     HeadlinesComponent,
     CryptonewsComponent,
     GeneralComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    EarnComponent
   ],
   imports: [
     BrowserModule,
