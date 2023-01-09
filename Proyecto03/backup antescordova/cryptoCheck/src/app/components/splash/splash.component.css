@@ -1,0 +1,8 @@
+main {
+	background-image: url("https://raw.githubusercontent.com/DavidAlex99/DAWM_Proyectos/main/Proyecto03/recursos/imagenes/paginaInicio.jpg");
+	background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;
+	height: 100vh;
+	width: 100vw;
+}
