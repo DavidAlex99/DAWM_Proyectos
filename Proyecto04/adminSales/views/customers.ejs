@@ -29,7 +29,9 @@
           <div id="container"></div>
           <!-- BOTON PARA EMPEZAR EL FILTRO -->
           <!-- <button id="buttonFiltro" onclick="getFiltro()">Revisar compras</button> -->
+          <!-- LINEA 33 DE PRUEBA, COMENTAR ESTA Y DESCOMENTAR LA 31 -->
           <a href="/customers/filtro" id="buttonFiltro" onclick="getFiltro()" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Revisar compras</span></a>
+          <!-- --------------------------- -->
           <p id="salida"></p>
 
         <br>
@@ -41,10 +43,10 @@
           <thead>
             <tr>
               <th>Nombre cliente</th>
-              <th>Nombre de contacto</th>
+              <!-- <th>Nombre de contacto</th>
               <th>Apellido de contacto</th>
               <th>Numero cliente</th>
-              <th>Pais</th>
+              <th>Pais</th> -->
             </tr>
           </thead>
           <tbody>
@@ -52,10 +54,10 @@
             <% arrCustomers.forEach((customer) => { %>
             <tr>
               <td><%= customer.customerName %></td>
-              <td class="nombreCliente"><%= customer.contactFirstName %></td>
+              <!-- <td class="nombreCliente"><%= customer.contactFirstName %></td>
               <td><%= customer.contactLastName %></td>
               <td class="idClientes"><%= customer.customerNumber %></td>
-              <td><%= customer.country %></td>
+              <td><%= customer.country %></td> -->
             </tr>
             <!-- <p><%= customer.contactFirstName %></p> -->
             <% }); %>
@@ -135,6 +137,8 @@
           console.log("en el script interni"); 
 
           document.querySelector("#salida").textContent = output;
+
+
         }
 
         //FUNCION PARA TOMAR EL NUMERO DEL CLIENTE DEL TAG salida
@@ -147,14 +151,6 @@
 
         }
         /////////////////////////////////////
-
-      
-        
-
-
-
-
-
     </script>
 
   </body>

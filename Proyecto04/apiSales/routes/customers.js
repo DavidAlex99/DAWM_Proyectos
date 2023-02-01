@@ -3,9 +3,9 @@ var router = express.Router();
   
 
 const { Sequelize,Op } = require('sequelize');
-const Customers = require('../../apiSales/models').customers;  
+const Customers = require('../models').customers;  
 //se importa otro modelo, ya que tiene una asociacion con este modelo
-const Employees = require('../../apiSales/models').customers;
+const Employees = require('../models').employees;
   
 //controlador para que nos devuelva todo
 router.get('/findAll/json', function(req, res, next) {  
@@ -22,6 +22,7 @@ router.get('/findAll/json', function(req, res, next) {
 
 // CONTROLADOR 1
 //ciontrolador el cual actuara para la visualizacion de archivos
+//LLAMADO DESDE admin/routes/customer.js router.get(/customers)
 router.get('/findAll/json', function(req, res, next) {  
 
     Customers.findAll({  
@@ -61,10 +62,31 @@ router.get('/findAllByNumber/json', function(req, res, next){
         res.json(customers);  
       })  
       .catch(error => res.status(400).send(error)) 
-
 })
   
 
+router.get('/custOfEmpl/json', function(req, res, next) {  
+  
+  //
+  Customers.findAll({  
+      attributes: { exclude: ["updatedAt", "createdAt"] } ,
+      include: [{
+          model: Employees,
+          // attributes: ['customerName', 'customerNumber', 'employeeNumber', 'firstName', 'lastName'],
+          attributes: ['email'],
+          through: {attributes: []}
+        }], 
+        where: { 
+          firstName: "Diane"
+        },
+        required: false
+  })  
+  .then(customers => {  
+      res.json(customers);  
+  })  
+  .catch(error => res.status(400).send(error)) 
+
+});
   
 
 module.exports = router;

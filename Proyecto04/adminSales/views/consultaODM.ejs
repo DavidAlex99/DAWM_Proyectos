@@ -11,6 +11,17 @@
     <h1>Firebase Realtime Database Example</h1>
     <ul id="data"></ul>
 
+    <table id="results">
+      <thead>
+        <tr>
+          <th>productName</th>
+          <th>status</th>
+        </tr>
+      </thead>
+      <tbody id="results-body">
+      </tbody>
+    </table>
+
       <!-- <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"></script>
       <script src="index.js"></script> -->
@@ -18,50 +29,112 @@
         <!-- Load Firebase library -->
         <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
-        <script src="../public/javascripts/indexODM.js"></script>
+        <!-- JAVASCRIPT INNECESARIO -->
+        <!-- <script src="../public/javascripts/indexODM.js"></script> -->
 
+      <!-- <script type="module"> -->
       <script>
         // Import the functions you need from the SDKs you need
         // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
         // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
+        // // TODO: Add SDKs for Firebase products that you want to use
+        // // https://firebase.google.com/docs/web/setup#available-libraries
       
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const config  = {
-          apiKey: "AIzaSyD2GcCZVQoqNOG5Z1LoIm3TqPtal-vO6UI",
-          authDomain: "salesproyecto4.firebaseapp.com",
-          databaseURL: "https://salesproyecto4-default-rtdb.firebaseio.com",
-          projectId: "salesproyecto4",
-          storageBucket: "salesproyecto4.appspot.com",
-          messagingSenderId: "207842693802",
-          appId: "1:207842693802:web:01f50aad0f46cce6af76d3",
-          measurementId: "G-3ZY78KP568"
-        };
+        // // Your web app's Firebase configuration
+        // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        // const config  = {
+        //   apiKey: "AIzaSyD2GcCZVQoqNOG5Z1LoIm3TqPtal-vO6UI",
+        //   authDomain: "salesproyecto4.firebaseapp.com",
+        //   databaseURL: "https://salesproyecto4-default-rtdb.firebaseio.com",
+        //   projectId: "salesproyecto4",
+        //   storageBucket: "salesproyecto4.appspot.com",
+        //   messagingSenderId: "207842693802",
+        //   appId: "1:207842693802:web:01f50aad0f46cce6af76d3",
+        //   measurementId: "G-3ZY78KP568"
+        // };
       
         // Initialize Firebase
         // const app = initializeApp(config );
-        firebase.initializeApp(config);
-        const database = firebase.database();
-        const dataList = document.getElementById("data");
-
-        // function llenar(){
-        //     var estado = app.ref('0')
-        //     estado.on('value', function(snapshot){
-        //         var data = snapshot.val();
-        //         console.log(data.status);
-        //     })
-        // }
+        // firebase.initializeApp(config);
+        // // const database = firebase.database();
+        // const dataList = document.getElementById("data");
 
         // Read data from Firebase
         // Get data from Firebase
-        for(let i=0; i<2995; i++){
-            database.ref("/" + i).once("value", snapshot => {
-  const users = snapshot.val();
-  console.log(users);
-});
-        }
+        // for(let i=0; i<2995; i++){
+        //      // database.ref("/" + i).once("value", snapshot => { 
+        //     database.ref("/" + i).once("value", snapshot => { 
+        //         const users = snapshot.val();
+        //         console.log(users);
+              
+        //       // const users = snapshot.val();
+        //       // console.log(users);
+        //     });
+        // }
+
+        // var ref = database.ref("productName");
+        //   ref.orderByChild("status").equalTo("Shipped").once("value", function(snapshot) {
+          
+        //   console.log(snapshot.val());
+        // });
+
+        // var firebaseConfig = {
+        //   apiKey: "AIzaSyBwPFmlo9U9fMmBnYmHHEX8iQbiMW3RFls",
+        //   databaseURL: "https://odmwithfarebase-default-rtdb.firebaseio.com/",
+        // };
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyBwPFmlo9U9fMmBnYmHHEX8iQbiMW3RFls",
+          authDomain: "odmwithfarebase.firebaseapp.com",
+          databaseURL: "https://odmwithfarebase-default-rtdb.firebaseio.com",
+          projectId: "odmwithfarebase",
+          storageBucket: "odmwithfarebase.appspot.com",
+          messagingSenderId: "319280942450",
+          appId: "1:319280942450:web:8c56d5fc5624a4e14fa1eb",
+          measurementId: "G-9JCP6V4MR9"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var database = firebase.database();
+        var ref = database.ref('collection');
+        // var query = ref.orderByChild('status').equalTo('Shipped');
+
+        // query.once('value', function(snapshot) {
+        //   snapshot.forEach(function(childSnapshot) {
+        //     var productName = childSnapshot.val().productName;
+        //     console.log(productName);
+        //   });
+        // });
+
+
+        // firebase.database().ref("productName").orderByChild("status").equalTo("Shipped")
+        // .once("value").then(function(snapshot) {
+        //   snapshot.forEach(function(childSnapshot) {
+        //     var product = childSnapshot.val();
+
+        //     // Crea una fila en la tabla para cada resultado de la búsqueda
+        //     var row = document.createElement("tr");
+        //     var productNameCell = document.createElement("td");
+        //     productNameCell.textContent = product.productName;
+        //     row.appendChild(productNameCell);
+        //     var statusCell = document.createElement("td");
+        //     statusCell.textContent = product.status;
+        //     row.appendChild(statusCell);
+        //   tableBody.appendChild(row);
+        //   });
+        // });
+
+        //1REQUERIMIENTO
+        //DEVUELVE LOS ORDERNUMBERS DE LOS ESTADOS SHIPPED
+        var orderNumbers = [];
+
+        ref.orderByChild("status").equalTo("Shipped").on("child_added", function(snapshot) {
+          orderNumbers.push(snapshot.val().OrderNumber);
+        });
+        console.log(orderNumbers);
+        /////////////////////////////
+
 
 
       </script>

@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
 //CONTROLADOR CUANDO SE APRETE LA SECCION EN FILTRO CLIENTE
 //EN LA PANTALLA PRINCIPAL
-router.get('/findAll/view', function(req, res, next){
+router.get('/historialCliente', function(req, res, next){
   res.render('customers', { title: 'Clientes'})
 });
 
