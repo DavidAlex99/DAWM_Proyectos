@@ -65,21 +65,21 @@ router.get('/findAllByNumber/json', function(req, res, next){
 })
   
 
-router.get('/custOfEmpl/json', function(req, res, next) {  
+router.get('/customersWithEmployee/json', function(req, res, next) {  
   
-  //
   Customers.findAll({  
       attributes: { exclude: ["updatedAt", "createdAt"] } ,
       include: [{
           model: Employees,
           // attributes: ['customerName', 'customerNumber', 'employeeNumber', 'firstName', 'lastName'],
-          attributes: ['email'],
+          attributes: ['firstName, lastName'],
           through: {attributes: []}
         }], 
-        where: { 
-          firstName: "Diane"
-        },
-        required: false
+        // where: { 
+        //   firstName: "Diane"
+        // },
+        // required: false
+      attributes: ['contactFirstName', 'contactLastName'],
   })  
   .then(customers => {  
       res.json(customers);  
@@ -88,5 +88,17 @@ router.get('/custOfEmpl/json', function(req, res, next) {
 
 });
   
+router.get('/customersWithEmployee', async function(req, res, next) {
+  const response = await Customers.findAll({
+    include: [{
+      model: Employees,
+      as: 'salesRepEmployeeNumber_employee',
+      attributes: ['firstName', 'lastName'],
+    }],
+    attributes: ['customerNumber', 'contactLastName', 'contactFirstName'],
+  });
+  
+    res.json(response);
+  });
 
 module.exports = router;
