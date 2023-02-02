@@ -37,23 +37,23 @@ router.get('/customers', async function(req, res, next) {
 // al API MEDIANTE URL, que se encuentra en la carpeta REST de ADMIN, 
 // cuando se esta dentro (CONTROLADOR DE INTERES)
 // de la ruta CUSTOMERS (CONTROLADORE DE PRUEBA)
-router.get('/customers', async function(req, res, next) {
+// router.get('/customers', async function(req, res, next) {
   
-  //CONTROLADOR 1 EN EL API ROUTES/CUSTOMERS.JS
-  const URL = 'http://localhost:4444/rest/customers/custOfEmpl/json'
-  const config = {
-    proxy: {
-      host: 'localhost',
-      port: 4444
-    }
-  }
-  const response = await axios.get(URL, config);
+//   //CONTROLADOR 1 EN EL API ROUTES/CUSTOMERS.JS
+//   const URL = 'http://localhost:4444/rest/customers/custOfEmpl/json'
+//   const config = {
+//     proxy: {
+//       host: 'localhost',
+//       port: 4444
+//     }
+//   }
+//   const response = await axios.get(URL, config);
 
-  // response.data.map( item => { item.url = 'http://localhost:4444/'+item.ruta.replace('public/','') } )
-  console.log(response);
-  //EL RESPONSE CONTIENE EL JSON QUW DEVUELVE EL CONTROLADOR DE API
-  res.render('customers', { title: 'Customers', arrCustomers: response.data });
-})
+//   // response.data.map( item => { item.url = 'http://localhost:4444/'+item.ruta.replace('public/','') } )
+//   console.log(response);
+//   //EL RESPONSE CONTIENE EL JSON QUW DEVUELVE EL CONTROLADOR DE API
+//   res.render('customers', { title: 'Customers', arrCustomers: response.data });
+// })
 ///////////////////////////////////////////////////////////////////
 
 
